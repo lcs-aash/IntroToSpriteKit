@@ -40,27 +40,9 @@ PlaygroundSupport.PlaygroundPage.current.liveView = view
  */
 
 // Create and position a sprite at the origin, using the "circle.png" image
-let circle = SKSpriteNode(imageNamed: "circle")
+let circle1 = SKSpriteNode(imageNamed: "circle1")
 circle.position = CGPoint(x: 0, y: 0)
 
-/*:
- - Experiment:
- Run the playground now. What do you notice? What is the node count?
- 
- It's not enough to simply create an *instance* of the `SKSpriteNode` class. For the sprite to appear, it must be added to the scene.
- 
- - Experiment:
-    Uncomment the code on line 63 below.
-    
-    Observe the change to the node count.
- 
-    What does the position of the sprite tell you about the location of the origin in a SpriteKit scene?
- 
-    What does the appearance of the circle tell you about where a sprite is "anchored"?
- 
- */
-
-//scene.addChild(circle)
 
 /*:
  
@@ -75,7 +57,7 @@ Once you have selected the block of code, press the **Command** and / keys at th
 
  */
 
-//// Add another circle to the right of the origin
+/// Add another circle to the right of the origin
 //let circle2 = SKSpriteNode(imageNamed: "circle")
 //circle2.position = CGPoint(x: 100, y: 0)
 //scene.addChild(circle2)
@@ -114,15 +96,29 @@ Once you have selected the block of code, press the **Command** and / keys at th
  If autocomplete is not offering suggestions as shown, please quit Xcode, then reopen this project, and carry on.
  
  */
+// Required frameworks
+import PlaygroundSupport // Allows for live view
+import SprikeKit // Allows for 2D graphics
 
-// Exercise 1: Write your code below.
+// Define animation, size and scene
+let frame = CGRect
+var scene = SKSceen (size: frame.size)
 
+// Define configure and present the scene
+let view = SKView (frame: frame)
+view.ShowsNodeCount = true
+view.presentScene(scene)
 
-// Exercise 2: Write your code below.
+// Create and position the star centered vertically and horizontally
+let star = SKSpriteNode (imageNamed: "star")
+star.position = CGPoint (x: 0, y: 0, width: 300, height: 525)
 
+// Create and position the circle to the top right corner
+let circle = SKSpriteNode (imageNamed: "circle")
+circle.position = CGPoint (x: 90, y: 100, width: 300, height: 525)
 
-// Exercise 3: Write your code below.
-
+// Show the view in the live view area
+PlaygroundSupport.PlayGroundPage.current.liveView = view 
 
 /*:
 
